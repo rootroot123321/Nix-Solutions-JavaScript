@@ -43,6 +43,10 @@ p {
   line-height: 1.4em;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   display: grid;
   grid-template-rows: 0.9fr 0.35fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.3fr 0.5fr;
@@ -170,6 +174,9 @@ p {
         }
         .icon {
           margin-right: 5%;
+          img {
+            max-width: initial;
+          }
         }
         .performance > .icon {
           .feature-icon(245, 87, 103, 0.2);
