@@ -1,0 +1,94 @@
+{
+  "pizzas": [
+    {
+      "id": 0,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc03986-300x450.jpg",
+      "name": " Пицца Napoli",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 190,
+      "category": 2,
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc04497-300x450.jpg",
+      "name": "Пицца Гавайская",
+      "types": [0],
+      "sizes": [26, 40],
+      "price": 125,
+      "category": 3,
+      "rating": 6
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc04518-300x450.jpg",
+      "name": "Пицца Деревенская",
+      "types": [0],
+      "sizes": [26, 40],
+      "price": 130,
+      "category": 2,
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc04507-300x450.jpg",
+      "name": "Пицца Кардинале",
+      "types": [1],
+      "sizes": [26, 30, 40],
+      "price": 158,
+      "category": 0,
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc03966-300x450.jpg",
+      "name": "Пицца Милано",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 165,
+      "category": 2,
+      "rating": 8
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc04511-300x450.jpg",
+      "name": "Пицца Пепперони",
+      "types": [0],
+      "sizes": [30, 40],
+      "price": 125,
+      "category": 0,
+      "rating": 2
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc03971-300x450.jpg",
+      "name": "Пицца с телятиной",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 175,
+      "category": 4,
+      "rating": 9
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc04515-300x450.jpg",
+      "name": "Пицца Цезарь",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 140,
+      "category": 3,
+      "rating": 10
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://www.korbo.od.ua/wp-content/uploads/2020/12/dsc04494-300x450.jpg",
+      "name": "Пицца Четыре сыра",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 145,
+      "category": 1,
+      "rating": 10
+    }
+  ]
+}

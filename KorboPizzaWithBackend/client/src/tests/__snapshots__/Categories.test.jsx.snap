@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the categories data (snapshot) 2`] = `"Острые"`;
+
+exports[`renders the categories data (snapshot) 3`] = `"Колбасные"`;
+
+exports[`renders the categories data (snapshot) 4`] = `"Грибные"`;
+
+exports[`renders the categories data (snapshot) 5`] = `"Сырные"`;
+
+exports[`renders the categories data (snapshot) 6`] = `"Закрытые"`;

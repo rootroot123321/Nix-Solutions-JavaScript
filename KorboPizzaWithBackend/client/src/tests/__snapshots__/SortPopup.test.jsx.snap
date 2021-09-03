@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the sort popup data (snapshot) 2`] = `"цене"`;
+
+exports[`renders the sort popup data (snapshot) 3`] = `"алфавиту"`;
+
+exports[`renders the sort popup data (snapshot) 4`] = `"популярности"`;
+
+exports[`renders the sort popup data (snapshot) 5`] = `"дате добавления"`;
+
+exports[`renders the sort popup data (snapshot) 6`] = `"дате обновления"`;
+
+exports[`renders the sort popup data (snapshot) 7`] = `"качеству"`;
+
+exports[`renders the sort popup data (snapshot) 8`] = `"продаваемости"`;
