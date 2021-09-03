@@ -3,14 +3,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Actions before starting the server
-1. Create a database on PostgreSQL.
-2. In `server/env` define variables to connect to the database.
-3. Run the server using `npm run dev`.
+1. Use `npm install` or `npm i` to install all necessary modules for the server.
+2. Create a database on PostgreSQL.
+3. In `server/env` define variables to connect to the database.
+4. Run the server using `npm run dev`.
 
 ## Actions before starting the client
-1. Add categories to the table 'categories' on PostgreSQL using `server/categories.sql`.
-2. Add pizzas to the table 'pizzas' on PostgreSQL using `server/pizzas.sql`.
-3. Run the client using `npm start`.
+1. Use `npm install` or `npm i` to install all necessary modules for the client.
+2. Add categories to the table 'categories' on PostgreSQL using `server/categories.sql`.
+3. Add pizzas to the table 'pizzas' on PostgreSQL using `server/pizzas.sql`.
+4. Run the client using `npm start`.
 
 ## Available Scripts
 
