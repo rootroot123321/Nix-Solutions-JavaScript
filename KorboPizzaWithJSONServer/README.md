@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Actions before starting the client
+1. Use `npm install` or `npm i` to install all necessary modules.
+2. Use `npm run json-server-pizzas` to run the JSON-Server. 
+3. Run the client using `npm start`.
 ## Available Scripts
 
 In the project directory, you can run:

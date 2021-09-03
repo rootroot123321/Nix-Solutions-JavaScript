@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Actions before starting the client
 1. Add categories to table 'categories' in PostgreSQL using `server/categories.sql`.
 2. Add pizzas to table 'pizzas' in PostgreSQL using `server/pizzas.sql`.
-3. Run the client
+3. 3. Run the client using `npm start`.
 
 ## Available Scripts
 
