@@ -1,0 +1,35 @@
+@import '../variables';
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3% 0;
+    @mixin input-style {
+      background-color: rgba(255, 155, 0, 0.5);
+      width: 35%;
+      height: 30px;
+      padding: 2%;
+      font-size: 1em;
+      margin-bottom: 1.5%;
+      border-radius: 10px;
+    }
+    .checkbox {
+      display: flex;
+      flex-direction: row;
+    }
+    input:not([type='file']) {
+      @include input-style;
+    }
+
+    select {
+      @include input-style;
+      padding: initial;
+    }
+  }
+}
