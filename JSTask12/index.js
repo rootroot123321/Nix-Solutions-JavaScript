@@ -2,8 +2,7 @@
 function between(a, b) {
     let arrayBetweenNumbers = [];
     let i = 0, currentNumber = a;
-    do
-        arrayBetweenNumbers[i++] = currentNumber++;
+    do arrayBetweenNumbers[i++] = currentNumber++;
     while(currentNumber <= b);
     return arrayBetweenNumbers;
 }

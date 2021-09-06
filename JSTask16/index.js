@@ -2,7 +2,7 @@
 function wordLettersMore(string, n) {
     let words;
     let moreLettersArray = [];
-    string = string.replace(/[,.;\-:]/g, '');
+    string = string.replace(/[,.;\-:!?]/g, '');
     words = string.split(' ');
     for(let i = 0; i < words.length; i++)
         if(words[i].length > n)

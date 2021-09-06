@@ -1,5 +1,5 @@
 "use strict";
-function evensAndOdds(number) {
+function evensAndOdds1(number) {
     if(number === 0)
         return number;
     if(number % 2 === 0) {
@@ -21,26 +21,27 @@ function evensAndOdds(number) {
         return hex.split('').reverse().join('');
     }
 }
+
 function toLetter(hex, number) {
     switch(number % 16)
     {
         case 10:
-            hex += 'A';
+            hex += 'a';
             break;
         case 11:
-            hex += 'B';
+            hex += 'b';
             break;
         case 12:
-            hex += 'C';
+            hex += 'c';
             break;
         case 13:
-            hex += 'D';
+            hex += 'd';
             break;
         case 14:
-            hex += 'E';
+            hex += 'e';
             break;
         case 15:
-            hex += 'F';
+            hex += 'f';
             break;
         default:
             hex += number % 16;
@@ -48,5 +49,17 @@ function toLetter(hex, number) {
     return hex;
 }
 
-console.log(evensAndOdds(456));
-console.log(evensAndOdds(223));
+function evensAndOdds2(number) {
+    if(number % 2 === 0) {
+        return number.toString(2);
+    }
+    else {
+        return number.toString(16);
+    }
+}
+
+console.log(evensAndOdds1(456));
+console.log(evensAndOdds1(223));
+
+console.log(evensAndOdds2(456));
+console.log(evensAndOdds2(223));

@@ -1,13 +1,15 @@
+"use strict";
+
 function findVowels1(str) {
     return str.match(/[аеёиоуыэюя]/gi).length;
 }
 
 function findVowels2(str) {
-    return str.split('').filter((item) => item.match(/[аеёиоуыэюя]/i)).length;
+    return str.split('').filter(item => item.match(/[аеёиоуыэюя]/i)).length;
 }
 
 function findVowels3(str) {
-    return str.split('').filter((item) => /[аеёиоуыэюя]/gi.test(item)).length;
+    return str.split('').filter(item => /[аеёиоуыэюя]/gi.test(item)).length;
 }
 
 console.log(findVowels1('Привет'));

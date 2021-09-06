@@ -1,8 +1,7 @@
+"use strict";
 function reverseExpression(exp) {
     const operands = exp.split(/[-+*/]/).reverse();
     const operators = exp.split('').filter(item => item.match(/[-+*/]/)).reverse();
-    console.log(operators);
-    console.log(operands);
     let result = "";
     operands.forEach((operand, index, operands) =>
         result += index !== operands.length - 1 ? operand + operators[index] : operand

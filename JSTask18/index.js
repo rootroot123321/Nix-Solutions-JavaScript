@@ -7,5 +7,6 @@ function spacey(array) {
     }
     return array;
 }
+
 console.log(spacey(['kevin', 'has','no','space']));
 console.log(spacey(['this','cheese','has','no','holes']));

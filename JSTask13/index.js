@@ -1,5 +1,5 @@
 "use strict";
-function hexToDec(hex) {
+function hexToDec1(hex) {
     let decimal = 0;
     for(let i = 0; i < hex.length; i++) {
         let sixteenPower =  16 ** (hex.length - 1 - i);
@@ -36,8 +36,19 @@ function hexToDec(hex) {
     }
     return decimal;
 }
-console.log(hexToDec('1'));
-console.log(hexToDec('a'));
-console.log(hexToDec('10'));
-console.log(hexToDec('FF'));
-console.log(hexToDec('-C'));
+
+function hexToDec2(hex) {
+    return parseInt(hex.split('-').join(''), 16);
+}
+
+console.log(hexToDec1('1'));
+console.log(hexToDec1('a'));
+console.log(hexToDec1('10'));
+console.log(hexToDec1('FF'));
+console.log(hexToDec1('-C'));
+
+console.log(hexToDec2('1'));
+console.log(hexToDec2('a'));
+console.log(hexToDec2('10'));
+console.log(hexToDec2('FF'));
+console.log(hexToDec2('-C'));

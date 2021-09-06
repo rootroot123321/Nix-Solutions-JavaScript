@@ -1,3 +1,4 @@
+"use strict";
 function getAlign(str) {
     let [upper, lower] = [0, 0];
     for(let item of str){

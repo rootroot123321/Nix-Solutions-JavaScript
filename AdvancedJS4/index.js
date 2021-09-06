@@ -1,7 +1,10 @@
+"use strict";
 function getIndexesOfSum(arr, n) {
     for(const item1 of arr) {
         for(const item2 of arr) {
-            if(item1 + item2 === n) return [arr.indexOf(item1), arr.indexOf(item2)];
+            if(item1 + item2 === n) {
+                return [arr.indexOf(item1), arr.indexOf(item2)];
+            }
         }
     }
     return [];

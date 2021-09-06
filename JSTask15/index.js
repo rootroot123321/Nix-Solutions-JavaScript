@@ -11,7 +11,7 @@ function maxDiff(array) {
         }
         return maxValue - minValue;
     }
-    else return 0;
+    return 0;
 }
 
 console.log(maxDiff([0, 1, 2, 3, 4, 5, 6]));

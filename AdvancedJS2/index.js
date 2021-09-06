@@ -1,3 +1,4 @@
+"use strict";
 function misspelled(str1, str2) {
     let misspells = 0;
     const diff = str1.length - str2.length;

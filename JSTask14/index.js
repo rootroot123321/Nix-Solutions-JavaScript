@@ -13,6 +13,7 @@ function removeExclamationPoint(string, number) {
     modifiedString = splitString.join('');
     return modifiedString;
 }
+
 console.log(removeExclamationPoint("Hi!",1));
 console.log(removeExclamationPoint("Hi!",100));
 console.log(removeExclamationPoint("Hi!!!",1));

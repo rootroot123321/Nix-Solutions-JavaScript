@@ -3,21 +3,18 @@
 function deleteElementsByAlphabet(str, n) {
     let char = 'a';
     let charCode = +char.charCodeAt(0);
-    let index = 0;
     let counter = 0;
     do {
-        if(str[index] === char) {
+        if(str.includes(char)) {
             str = str.split('');
-            str.splice(index, 1);
+            str.splice(str.indexOf(char), 1);
             str = str.join('');
             counter++;
         }
-        if(str.length !== 1)index++;
-        if(counter === n || str === '') break;
-        if(index > str.length) {
-            index = 0;
+        else {
             char = String.fromCharCode(++charCode);
         }
+        if(str === '') break;
     } while(counter < n);
     return str;
 }

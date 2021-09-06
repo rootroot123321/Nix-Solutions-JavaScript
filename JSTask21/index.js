@@ -13,6 +13,7 @@ function switcheroo(string) {
     }
     return array.join('');
 }
+
 console.log(switcheroo('abc'));
 console.log(switcheroo('aaabcccbaaa'));
 console.log(switcheroo('ccccc'));
