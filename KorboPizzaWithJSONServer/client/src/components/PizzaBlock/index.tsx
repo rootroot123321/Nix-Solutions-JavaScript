@@ -19,6 +19,7 @@ function PizzaBlock({id, name = '---', imageUrl, price = 0, onClickAddPizza, add
     const onSelectSize = (index: number) => {
         setActiveSize(index);
     };
+    const isAuth = useSelector(({authorize}: {authorize: any}) => authorize.isAuth);
     const onAddPizza = () => {
         const obj = {
             id,
@@ -62,7 +63,7 @@ function PizzaBlock({id, name = '---', imageUrl, price = 0, onClickAddPizza, add
             </div>
             <div className="pizza-block__bottom">
                 <div className="pizza-block__price">{`${currency === '$' ? currency: ''}${calcPrice(price, currency)}${currency !== '$' ? currency: ''}`}</div>
-                <Button onClick={onAddPizza} className="button--add" outline>
+                {isAuth && <Button onClick={onAddPizza} className="button--add" outline>
                     <svg
                         width="12"
                         height="12"
@@ -75,7 +76,7 @@ function PizzaBlock({id, name = '---', imageUrl, price = 0, onClickAddPizza, add
                     </svg>
                     <span>Добавить</span>
                     {addedCount && <i>{addedCount}</i>}
-                </Button>
+                </Button>}
             </div>
         </div>
     );
