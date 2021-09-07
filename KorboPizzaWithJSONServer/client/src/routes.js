@@ -1,13 +1,24 @@
-import {CART_ROUTE, HOME_ROUTE} from "./utils/constants";
-import {Cart, Home} from "./pages";
+import {CART_ROUTE, HOME_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE} from "./utils/constants";
+import {Cart, Home, Auth} from "./pages";
 
-export const routes = [
+export const authRoutes = [
+    {
+        path: CART_ROUTE,
+        Component: Cart
+    }
+];
+
+export const publicRoutes = [
     {
         path: HOME_ROUTE,
         Component: Home
     },
     {
-        path: CART_ROUTE,
-        Component: Cart
+        path: LOGIN_ROUTE,
+        Component: Auth
+    },
+    {
+        path: REGISTRATION_ROUTE,
+        Component: Auth
     }
 ];

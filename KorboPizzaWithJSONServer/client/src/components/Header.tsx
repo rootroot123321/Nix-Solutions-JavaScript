@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {NavLink} from 'react-router-dom';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 
 import logoSvg from '../assets/img/pizza-logo.svg';
 import {Button} from './index';
-import {HOME_ROUTE, CART_ROUTE} from "../utils/constants";
+import {HOME_ROUTE, CART_ROUTE, REGISTRATION_ROUTE} from "../utils/constants";
 import {setIsAuth, setUser} from "../redux/actions/authorize";
-import {setCurrency} from "../redux/actions/currency";
 import {calcPrice} from "../utils/functions";
+import {setCurrency} from "../redux/actions/currency";
 import {clearCart} from "../redux/actions/cart";
 
 function Header({isAuth}: { isAuth: boolean }) {
@@ -24,7 +24,6 @@ function Header({isAuth}: { isAuth: boolean }) {
     const handleCurrencySelection = e => {
         dispatch(setCurrency(e.target.value))
     };
-
     return (
         <div className="header">
             <div className="container">
@@ -48,8 +47,7 @@ function Header({isAuth}: { isAuth: boolean }) {
                             </select>
                         </div>
                         <div className="header__cart">
-                            <NavLink to={CART_ROUTE}>
-                                <Button className="button--cart">
+                            <NavLink to={CART_ROUTE}>                                <Button className="button--cart">
                                     <span>{`${currency === '$' ? currency : ''}${calcPrice(totalPrice, currency)}${currency !== '$' ? currency : ''}`}</span>
                                     <div className="button__delimiter"/>
                                     <svg
@@ -105,7 +103,7 @@ function Header({isAuth}: { isAuth: boolean }) {
                         <div className="header__navbar" data-testid="navbar_data">
                             <nav>
                                 <ul>
-                                    <NavLink to='/registration'>
+                                    <NavLink to={REGISTRATION_ROUTE}>
                                         <Button>Авторизация</Button>
                                     </NavLink>
                                 </ul>

@@ -7,12 +7,12 @@ import {check} from "./http/userAPI";
 import {setUser, setIsAuth} from "./redux/actions/authorize";
 
 function App() {
-    const {user, isAuth} = useSelector(({authorize}) => authorize);
+    const {isAuth} = useSelector(({authorize}) => authorize);
     const dispatch = useDispatch();
     useEffect(() => {
         if (localStorage.getItem('token')) {
             check().then(() => {
-                dispatch(setUser(user));
+                dispatch(setUser(localStorage.getItem('user') ?? null));
                 dispatch(setIsAuth(true));
             });
         }

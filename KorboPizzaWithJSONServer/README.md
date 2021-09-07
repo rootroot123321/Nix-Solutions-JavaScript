@@ -5,7 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Actions before starting the client
 1. Use `npm install` or `npm i` to install all necessary modules.
 2. Use `npm run json-server-pizzas` to run the JSON-Server. 
-3. Run the client using `npm start`.
+3. Use `npm run json-server-users` to run the JSON-Server-Auth. 
+4. Run the client using `npm start`.
 ## Available Scripts
 
 In the project directory, you can run:

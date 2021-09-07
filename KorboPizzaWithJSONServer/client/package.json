@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@material-ui/core": "^4.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -18,12 +19,11 @@
     "babel-plugin-named-asset-import": "^0.3.7",
     "babel-preset-react-app": "^10.0.0",
     "bfj": "^7.0.2",
-    "body-parser": "^1.19.0",
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "classnames": "^2.3.1",
     "css-loader": "4.3.0",
-    "dotenv": "8.2.0",
+    "dotenv": "^8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
@@ -37,15 +37,13 @@
     "eslint-webpack-plugin": "^2.5.2",
     "file-loader": "6.1.1",
     "formik": "^2.2.9",
-    "fs": "^0.0.1-security",
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "4.5.0",
     "identity-obj-proxy": "3.0.0",
-    "jest": "26.6.0",
-    "jest-circus": "26.6.0",
+    "jest": "^26.6.0",
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
-    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "mini-css-extract-plugin": "0.11.3",
     "node-sass": "^6.0.1",
     "optimize-css-assets-webpack-plugin": "5.0.4",
@@ -61,12 +59,15 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
+    "react-bootstrap": "^1.6.1",
     "react-content-loader": "^6.0.3",
     "react-dev-utils": "^11.0.3",
     "react-dom": "^17.0.2",
+    "react-pagination": "^1.0.0",
     "react-redux": "^7.2.4",
     "react-refresh": "^0.8.3",
     "react-router-dom": "^5.2.0",
+    "react-test-renderer": "^17.0.2",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
     "resolve": "1.18.1",
@@ -81,7 +82,8 @@
     "webpack": "4.44.2",
     "webpack-dev-server": "3.11.1",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "5.1.4"
+    "workbox-webpack-plugin": "5.1.4",
+    "yup": "^0.32.9"
   },
   "proxy": "http://localhost:3001",
   "scripts": {
@@ -89,7 +91,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "json-server-pizzas": "json-server --watch db.json --port 3001",
-    "server-auth": "node server_users.js"
+    "json-server-users": "json-server-auth users.json --port 3002"
   },
   "eslintConfig": {
     "extends": [
@@ -114,6 +116,9 @@
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2|svg)$": "identity-obj-proxy"
     }
   },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
   "babel": {
     "presets": [
       "react-app"
@@ -125,6 +130,7 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-redux": "^7.1.18",
     "@types/react-router-dom": "^5.1.8",
+    "jest-circus": "^27.1.0",
     "json-server": "^0.16.3",
     "json-server-auth": "^2.1.0",
     "typescript": "^4.3.5"

@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import * as yup from 'yup';
 
 import {REGISTRATION_ROUTE, LOGIN_ROUTE, HOME_ROUTE} from "../utils/constants";
-import {login, registration} from "../http/userAPI";
+import {login, registration} from "../redux/actions/authorize";
 import {setUser, setIsAuth} from "../redux/actions/authorize";
 
 const validationSchema = yup.object({
@@ -45,21 +45,33 @@ const Auth = () => {
                 try {
                     let user;
                     if (isLogin) {
-                        user = await login(email, password);
+                        await login(email, password).then(response => user = response.user?.email);
                     } else {
-                        user = await registration(email, password);
+                        await registration(email, password).then(response => user = response.user?.email);
                     }
-                    dispatch(setUser(user.email));
+                    dispatch(setUser(user));
                     dispatch(setIsAuth(true));
                     history.push(HOME_ROUTE);
                 } catch (e) {
-                    alert(e?.response.data.message);
+                    switch(e.message) {
+                        case 'Cannot find user':
+                            alert('Пользователь не найден');
+                            break;
+                        case 'Incorrect password':
+                            alert('Неверный пароль');
+                            break;
+                        case 'Email already exists':
+                            alert('Пользователь уже существует');
+                            break;
+                        default:
+                            alert('Необработанная ошибка');
+                    }
                 }
             }
         }
     }, [email, password]);
 
-    const click = () => {
+    const click = async () => {
         const form = formRef.current;
         setEmail(form[0].value);
         setPassword(form[1].value);
